@@ -1,4 +1,4 @@
-# idle-shop
+# idle-site
 
 ## Project setup
 ```

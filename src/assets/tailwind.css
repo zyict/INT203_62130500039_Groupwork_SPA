@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#nav {
+    @apply top-0 h-20 bg-gradient-to-r from-red-500 to-purple-500;
+}
+
+.joinbtn {
+    @apply bg-chic-violet rounded-full w-36 h-12 text-white shadow-md;
+}
+
+.footer {
+    @apply h-16 w-full bottom-0 flex space-x-6 absolute justify-center bg-chic-violet;
+}
