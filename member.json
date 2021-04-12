@@ -1,0 +1,33 @@
+{
+    "memberLists": [{
+            "id": 1,
+            "name": "MIYEON",
+            "photo": "miyeon.jpg"
+        },
+        {
+            "id": 2,
+            "name": "MINNIE",
+            "photo": "minnie.jpg"
+        },
+        {
+            "id": 3,
+            "name": "SOOJIN",
+            "photo": "soojin.jpg"
+        },
+        {
+            "id": 4,
+            "name": "SOYEON",
+            "photo": "soyeon.jpg"
+        },
+        {
+            "id": 5,
+            "name": "YUQI",
+            "photo": "yuqi.jpg"
+        },
+        {
+            "id": 6,
+            "name": "SHUHUA",
+            "photo": "shuhua.jpg"
+        }
+    ]
+}

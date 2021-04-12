@@ -1,10 +1,10 @@
 <template>
   <div class="content">
-    <slot></slot>
+    <slot name="text"></slot>
   </div>
   <div id="bg-viewport">
   <video autoplay muted loop class="bgvdo">
-    <source src="../assets/vdo/hwaa.mp4" type="video/mp4" />
+    <slot name="vdo"></slot>
   </video>
   </div>
 </template>
@@ -12,9 +12,16 @@
 <style scoped>
 .bgvdo{
   display: block;
-  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
   height: auto;
+  max-width: none;
   opacity: 50%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 #bg-viewport{
   position: absolute;
