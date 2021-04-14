@@ -20,3 +20,23 @@
 .member-item {
     @apply p-4 text-center justify-center;
 }
+
+.container {
+    @apply flex flex-col justify-center items-center;
+}
+
+.label {
+    @apply font-semibold text-white;
+}
+
+.input {
+    @apply border border-gray-500 rounded-md;
+}
+
+.btn {
+    @apply bg-green-500 text-white rounded-md px-5 py-1 shadow-lg;
+}
+
+.errormsg {
+    @apply text-red-500 font-semibold pl-1;
+}

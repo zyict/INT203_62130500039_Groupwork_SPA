@@ -1,17 +1,14 @@
 <template>
-  <div class="about">
-    <h1>This is a Comment page.</h1>
-    <add-comment/>
-  </div>
+  <add-comment />
 </template>
 
 <script>
-import AddComment from '../components/AddComment.vue'
+import AddComment from "../components/AddComment.vue";
 
 export default {
-  name: 'Comments',
-  components:{
-    AddComment
-  }
-}
+  name: "Comments",
+  components: {
+    AddComment,
+  },
+};
 </script>
