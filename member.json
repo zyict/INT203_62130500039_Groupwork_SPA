@@ -1,33 +1,58 @@
 {
-    "memberLists": [{
-            "id": 1,
-            "name": "MIYEON",
-            "photo": "miyeon.jpg"
-        },
-        {
-            "id": 2,
-            "name": "MINNIE",
-            "photo": "minnie.jpg"
-        },
-        {
-            "id": 3,
-            "name": "SOOJIN",
-            "photo": "soojin.jpg"
-        },
-        {
-            "id": 4,
-            "name": "SOYEON",
-            "photo": "soyeon.jpg"
-        },
-        {
-            "id": 5,
-            "name": "YUQI",
-            "photo": "yuqi.jpg"
-        },
-        {
-            "id": 6,
-            "name": "SHUHUA",
-            "photo": "shuhua.jpg"
-        }
-    ]
+  "memberLists": [
+    {
+      "name": "MIYEON",
+      "position": "Main Vocalist, Visual",
+      "photo": "miyeon.jpg",
+      "bd": "1997 January 31",
+      "bloodtype": "B",
+      "nationality": "Korean",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "photo": "minnie.jpg",
+      "name": "MINNIE",
+      "position": "Main Vocalist",
+      "bd": "1997 October 23",
+      "bloodtype": "O",
+      "nationality": "Thai"
+    },
+    {
+      "id": 3,
+      "name": "SOOJIN",
+      "photo": "soojin.jpg",
+      "position": "Main Dancer, Sub Vocalist, Sub Rapper",
+      "bd": "1998 March 9",
+      "bloodtype": "O",
+      "nationality": "Korean"
+    },
+    {
+      "id": 4,
+      "name": "SOYEON",
+      "photo": "soyeon.jpg",
+      "position": "Leader, Main Rapper, Sub Vocalist, Center",
+      "bd": "1998 August 26",
+      "bloodtype": "B",
+      "nationality": "Korean"
+    },
+    {
+      "name": "YUQI",
+      "position": "Lead Dancer, Sub Vocalist, Sub Rapper, Face of the group",
+      "photo": "yuqi.jpg",
+      "bd": "1999 September 23",
+      "bloodtype": "B",
+      "nationality": "Chinese",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "name": "SHUHUA",
+      "photo": "shuhua.jpg",
+      "position": "Sub Vocalist, Visual, Maknae",
+      "bd": "2000 January 6",
+      "bloodtype": "O",
+      "nationality": "Taiwanese"
+    }
+  ]
 }
