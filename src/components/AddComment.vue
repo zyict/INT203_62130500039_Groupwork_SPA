@@ -92,9 +92,14 @@ export default {
       } else if (!this.emptyEmail && this.validateEmail(this.email)) {
         this.invalidEmail = false;
       }
-      console.log(`Name: ${this.name}`);
-      console.log(`Email: ${this.email}`);
-      console.log(`Comment: ${this.comment}`);
+
+      if(!this.emptyName && !this.emptyEmail && !this.emptyComment && !this.invalidEmail){
+        this.addComment({
+          name: this.name,
+          email: this.email,
+          comment: this.comment
+        })
+      }
     },
     validateEmail(email) {
       var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -107,6 +112,24 @@ export default {
         return data;
       } catch (error) {
         console.log(`Could not get reserved rooms! ${error}`);
+      }
+    },
+    async addComment(newComment){
+      try{
+        const res = await fetch(this.url,{
+          method: "POST",
+          headers: {
+            "content-type": "application/json"
+          },
+          body: JSON.stringify(newComment)
+        })
+        const data = await res.json()
+        this.commentLists = [...this.commentLists, data]
+        this.name =null
+        this.email = null
+        this.comment = null
+      }catch(error){
+        console.log(`Could not add new comment! ${error}`)
       }
     },
   },
