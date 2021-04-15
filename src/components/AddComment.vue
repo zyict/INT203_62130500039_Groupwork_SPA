@@ -1,7 +1,10 @@
  <template>
   <div id="c-section">
+    
     <div class="flex flex-col m-container bg-white bg-opacity-50">
       <!-- show comments -->
+      <button class="bg-red-500 text-white mt-24 px-4 py-2 absolute right-8 rounded-md" @click="signIn" v-if="!adminMode">Toggle Admin Mode</button>
+      <button class="bg-red-500 text-white mt-24 px-4 py-2 absolute right-8 rounded-md" @click="signIn" v-if="adminMode">Toggle User Mode</button>
       <div class="half pt-24">
         <ul v-for="c in commentLists" :key="c.id" class="flex flex-col justify-center items-center">
           <div class="bg-white bg-opacity-30 border border-opacity-50 border-white rounded-lg shadow p-2 my-1 max-w-lg">
@@ -12,6 +15,7 @@
             <div>
               {{ c.comment }}
             </div>
+            <button v-if="adminMode" class="bg-red-500 text-white px-2 py-1 rounded-md text-sm" @click="deleteComment(c.id)">DELETE</button>
           </li>
         </div>
         </ul>
@@ -80,6 +84,7 @@ export default {
       emptyComment: false,
       commentLists: [],
       url: "http://localhost:5001/commentLists",
+      adminMode: false,
     };
   },
   methods: {
@@ -132,6 +137,19 @@ export default {
         console.log(`Could not add new comment! ${error}`)
       }
     },
+    signIn(){
+      this.adminMode = !this.adminMode
+    },
+    async deleteComment(commentId){
+      try{
+        await fetch(`${this.url}/${commentId}`,{
+          method: 'DELETE'
+        })
+        this.commentLists = this.commentLists.filter(comment => comment.id !== commentId)
+      }catch(error){
+        console.log(`Could not delete comment! ${error}`)
+      }
+    }
   },
   async created(){
     this.commentLists = await this.getComments()
