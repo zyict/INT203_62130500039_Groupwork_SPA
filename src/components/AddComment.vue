@@ -83,7 +83,7 @@ export default {
       invalidEmail: false,
       emptyComment: false,
       commentLists: [],
-      url: "http://localhost:5001/commentLists",
+      url: "http://localhost:5000/commentLists",
       adminMode: false,
     };
   },
